@@ -42,6 +42,14 @@
                 Рассылка
               </RouterLink>
               <RouterLink
+                to="/jokes"
+                active-class="active"
+                class="flex items-center gap-2"
+              >
+                <Smile class="w-5 h-5" />
+                Шутки
+              </RouterLink>
+              <RouterLink
                 to="/chats"
                 active-class="active"
                 class="flex items-center gap-2"
@@ -90,6 +98,7 @@ import {
   MessageSquare,
   Folder,
   Shield,
+  Smile,
 } from 'lucide-vue-next'
 
 const authStore = useAuthStore()

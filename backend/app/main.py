@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 
 # Import routers
-from app.api.routes import auth, broadcast, chats, folders, proxy
+from app.api.routes import auth, broadcast, chats, folders, proxy, jokes
 from app.core.database import init_db
 
 load_dotenv()
@@ -38,6 +38,7 @@ app.include_router(broadcast.router, prefix="/api/broadcast", tags=["Broadcast"]
 app.include_router(chats.router, prefix="/api/chats", tags=["Chats"])
 app.include_router(folders.router, prefix="/api/folders", tags=["Folders"])
 app.include_router(proxy.router, prefix="/api/proxy", tags=["Proxy"])
+app.include_router(jokes.router, prefix="/api/jokes", tags=["Jokes"])
 
 # Health check
 @app.get("/health")
